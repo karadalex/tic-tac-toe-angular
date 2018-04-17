@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Tic Tac Toe';
+  secondPlayerOptions = ["Player 2", "Computer"];
+  selectedPLayer = "Player 2";
 }

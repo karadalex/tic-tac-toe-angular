@@ -2,6 +2,16 @@
   <h1>
     {{ title }}
   </h1>
+  <span class="players-select">
+    Player 1 vs    
+    <mat-form-field>
+      <mat-select [(value)]="selectedPlayer">
+        <mat-option *ngFor="let option of secondPlayerOptions" value="option">
+          {{ option }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </span>
   <app-grid></app-grid>
 </div>
 
