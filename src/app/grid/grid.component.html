@@ -1,6 +1,5 @@
 <div class="container">
-  {{message}}
-  <div *ngFor="let row of cells">
-    <app-cell *ngFor="let cell of row" (click)="cellClicked(cell)"></app-cell>
+  <div class="cells-row" *ngFor="let row of cells">
+    <app-cell *ngFor="let cell of row"></app-cell>
   </div>
 </div>
