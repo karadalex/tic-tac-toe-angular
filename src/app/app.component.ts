@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Tic Tac Toe';
   secondPlayerOptions = ["Player 2", "Computer"];
-  selectedPLayer = "Player 2";
+  selectedPlayer = "Player 2";
   playerTurn = 0;
 
   changePlayerTurn() {

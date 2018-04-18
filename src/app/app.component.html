@@ -6,12 +6,13 @@
     Player 1 vs    
     <mat-form-field>
       <mat-select [(value)]="selectedPlayer">
-        <mat-option *ngFor="let option of secondPlayerOptions" value="option">
+        <mat-option *ngFor="let option of secondPlayerOptions" [value]="option">
           {{ option }}
         </mat-option>
       </mat-select>
     </mat-form-field>
-  </span>
+  </span><br>
+  <span>{{(playerTurn==0)?"Player1":selectedPlayer}}'s turn</span>
   <app-grid [playerTurn]="playerTurn" (click)="changePlayerTurn()"></app-grid>
 </div>
 
