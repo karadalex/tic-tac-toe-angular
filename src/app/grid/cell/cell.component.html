@@ -1,6 +1,6 @@
 <div class="grid-cell" (click)="cellClicked()">
-    <img *ngIf="cellWasClicked && !playerTurn" 
+    <img *ngIf="cellWasClicked && !player" 
         src="assets/img/X.png"/>
-    <img *ngIf="cellWasClicked && playerTurn" 
+    <img *ngIf="cellWasClicked && player" 
         src="assets/img/O.png"/>
 </div>

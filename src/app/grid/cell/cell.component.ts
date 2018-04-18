@@ -8,8 +8,9 @@ import { Component, OnInit, Input } from '@angular/core';
 export class CellComponent implements OnInit {
 
   cellWasClicked:Boolean = false;
-  cellIsEmpty:Boolean;
   @Input() playerTurn:number; // 0 for player1, 1 for player2/computer
+  @Input() cell:number;
+  player:number;
 
   constructor() { }
 
@@ -18,5 +19,6 @@ export class CellComponent implements OnInit {
 
   cellClicked() {
     this.cellWasClicked = true;
+    this.player = this.playerTurn;
   }
 }
