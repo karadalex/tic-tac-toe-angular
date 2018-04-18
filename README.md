@@ -1,7 +1,10 @@
 TicTacToe Angular
 ==================
 
-
+<p align="center"> 
+  <img src="ui.png" align="center"/>
+</p>
+<br>
 
 
 ## Running the game
