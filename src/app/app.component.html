@@ -12,6 +12,6 @@
       </mat-select>
     </mat-form-field>
   </span>
-  <app-grid></app-grid>
+  <app-grid [playerTurn]="playerTurn" (click)="changePlayerTurn()"></app-grid>
 </div>
 

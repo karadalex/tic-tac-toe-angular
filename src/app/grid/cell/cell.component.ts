@@ -7,15 +7,16 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CellComponent implements OnInit {
 
-  message:string;
+  cellWasClicked:Boolean = false;
+  cellIsEmpty:Boolean;
+  @Input() playerTurn:number; // 0 for player1, 1 for player2/computer
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  cellClicked() :Boolean {
-    this.message = `Cell was clicked`;
-    return true;
+  cellClicked() {
+    this.cellWasClicked = true;
   }
 }
