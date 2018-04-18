@@ -10,6 +10,7 @@ export class AppComponent {
   secondPlayerOptions = ["Player 2", "Computer"];
   selectedPlayer = "Player 2";
   playerTurn = 0;
+  winner:string;
 
   changePlayerTurn() {
     if (this.playerTurn) {
@@ -17,5 +18,10 @@ export class AppComponent {
     } else {
       this.playerTurn = 1;
     }
+  }
+
+  getWinner($event) {
+    if ($event == 0) this.winner = "Player 1 won";
+    if ($event == 1) this.winner = this.selectedPlayer + " won";
   }
 }

@@ -12,7 +12,11 @@
       </mat-select>
     </mat-form-field>
   </span><br>
-  <span>{{(playerTurn==0)?"Player1":selectedPlayer}}'s turn</span>
-  <app-grid [playerTurn]="playerTurn" (click)="changePlayerTurn()"></app-grid>
+  <span>{{(playerTurn==0)?"Player1":selectedPlayer}}'s turn</span><br>
+  <span>{{winner}}</span>
+  <app-grid 
+    [playerTurn]="playerTurn" 
+    (click)="changePlayerTurn()"
+    (winnerEvent)="getWinner($event)"></app-grid>
 </div>
 

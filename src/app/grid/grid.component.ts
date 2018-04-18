@@ -10,7 +10,8 @@ export class GridComponent implements OnInit {
   cells:number[][];
   @Input() playerTurn:number; // 0 for player1, 1 for player2/computer
   playerMoves:number[][];
-  @Output() winnerEvent = new EventEmitter<string>();
+  winner:number;
+  @Output() winnerEvent = new EventEmitter<number>();
 
   constructor() { 
     this.cells = [[1,2,3],[4,5,6],[7,8,9]];
@@ -31,6 +32,8 @@ export class GridComponent implements OnInit {
       this.playerMoves[rowIndex][cellIndex] = -1;
     }
     console.log(this.playerMoves);
+    this.winner = this.checkWinner();
+    this.announceWinner();
   }
 
   checkWinner() {
@@ -57,6 +60,12 @@ export class GridComponent implements OnInit {
     }
     if (diag1Sum == -3 || diag2Sum == -3) {
       return 1; // player2 wins
+    }
+  }
+
+  announceWinner() {
+    if (this.winner == 0 || this.winner == 1) {
+      this.winnerEvent.emit(this.winner);
     }
   }
 }
