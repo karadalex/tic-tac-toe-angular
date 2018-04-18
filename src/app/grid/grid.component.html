@@ -2,7 +2,8 @@
   <div class="cells-row" *ngFor="let row of cells">
     <app-cell *ngFor="let cell of row" 
       [playerTurn]="playerTurn" 
-      [cell]="cell">
+      [cell]="cell"
+      (click)="playerPlayed(row, cell)">
     </app-cell>
   </div>
 </div>
